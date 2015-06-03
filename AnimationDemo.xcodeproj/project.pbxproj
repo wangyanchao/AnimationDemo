@@ -26,6 +26,7 @@
 		1DE9EE871B1C0D0A00BCF483 /* WWAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9EE861B1C0D0A00BCF483 /* WWAction.m */; };
 		1DF6600C1B1EBE7A001BC535 /* WWRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6600B1B1EBE7A001BC535 /* WWRate.m */; };
 		1DF6600F1B1F0082001BC535 /* WWSequential.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6600E1B1F0082001BC535 /* WWSequential.m */; };
+		1DF660121B1F0665001BC535 /* WWEaseOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF660111B1F0665001BC535 /* WWEaseOut.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		1DF6600B1B1EBE7A001BC535 /* WWRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRate.m; sourceTree = "<group>"; };
 		1DF6600D1B1F0082001BC535 /* WWSequential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSequential.h; sourceTree = "<group>"; };
 		1DF6600E1B1F0082001BC535 /* WWSequential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSequential.m; sourceTree = "<group>"; };
+		1DF660101B1F0665001BC535 /* WWEaseOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWEaseOut.h; sourceTree = "<group>"; };
+		1DF660111B1F0665001BC535 /* WWEaseOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWEaseOut.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				1D5AEA941B1DA9E5000CA6D3 /* WWMove.m */,
 				1D5AEA981B1DACF8000CA6D3 /* WWEaseIn.h */,
 				1D5AEA991B1DACF8000CA6D3 /* WWEaseIn.m */,
+				1DF660101B1F0665001BC535 /* WWEaseOut.h */,
+				1DF660111B1F0665001BC535 /* WWEaseOut.m */,
 				1D5AEA8F1B1DA245000CA6D3 /* WWMath.h */,
 				1D5AEA961B1DAB36000CA6D3 /* WWMath.m */,
 				1D5AEA9E1B1DBA63000CA6D3 /* WWSpwn.h */,
@@ -289,6 +294,7 @@
 				1D5AEA8E1B1D9F7C000CA6D3 /* WWAlphaEffect.m in Sources */,
 				1DE9EE871B1C0D0A00BCF483 /* WWAction.m in Sources */,
 				1D5AEA8B1B1D9EFE000CA6D3 /* WWContinuedEffect.m in Sources */,
+				1DF660121B1F0665001BC535 /* WWEaseOut.m in Sources */,
 				1DF6600C1B1EBE7A001BC535 /* WWRate.m in Sources */,
 				1DE9EE5F1B1BE40D00BCF483 /* main.m in Sources */,
 				1D5AEA951B1DA9E5000CA6D3 /* WWMove.m in Sources */,
