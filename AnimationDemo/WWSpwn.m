@@ -26,6 +26,12 @@
     [action._actionStack addObject:effect2];
     return action;
 }
++ (WWSpwn*) createWithTowActions:(NSArray *)actionStack
+{
+    WWSpwn* action = [[WWSpwn alloc] init];
+    [action._actionStack addObjectsFromArray:actionStack];
+    return action;
+}
 
 - (void) setTarget:(id)target
 {

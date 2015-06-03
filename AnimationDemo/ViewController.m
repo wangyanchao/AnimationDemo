@@ -14,6 +14,7 @@
 #import "WWEaseIn.h"
 #import "WWBezier.h"
 #import "WWSpwn.h"
+#import "WWSequential.h"
 
 @interface ViewController ()
 
@@ -37,12 +38,14 @@
     
     WWMove* move = [WWMove create:CGPointMake(0, 0) time:4];
     WWAlphaEffect* alpha = [WWAlphaEffect create:0.5 time:4];
-     WWEaseIn *easeIn = [WWEaseIn create:move];
+//     WWEaseIn *easeIn = [WWEaseIn create:move];
 //     WWEaseIn *easeIn2 = [WWEaseIn create:spawn];
-    WWSpwn* spawn = [WWSpwn createWithTowAction:easeIn effect2:alpha];
+//    WWSpwn* spawn = [WWSpwn createWithTowAction:easeIn effect2:alpha];
+    
+    WWSequential*seq = [WWSequential createWithTowActions:@[move,alpha]];
     
    
 
-    [self.aView runAction:spawn];
+    [self.aView runAction:seq];
 }
 @end

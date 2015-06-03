@@ -25,6 +25,7 @@
 		1DE9EE841B1BE75B00BCF483 /* WWEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9EE831B1BE75B00BCF483 /* WWEffect.m */; };
 		1DE9EE871B1C0D0A00BCF483 /* WWAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9EE861B1C0D0A00BCF483 /* WWAction.m */; };
 		1DF6600C1B1EBE7A001BC535 /* WWRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6600B1B1EBE7A001BC535 /* WWRate.m */; };
+		1DF6600F1B1F0082001BC535 /* WWSequential.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6600E1B1F0082001BC535 /* WWSequential.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		1DE9EE861B1C0D0A00BCF483 /* WWAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWAction.m; sourceTree = "<group>"; };
 		1DF6600A1B1EBE7A001BC535 /* WWRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWRate.h; sourceTree = "<group>"; };
 		1DF6600B1B1EBE7A001BC535 /* WWRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRate.m; sourceTree = "<group>"; };
+		1DF6600D1B1F0082001BC535 /* WWSequential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSequential.h; sourceTree = "<group>"; };
+		1DF6600E1B1F0082001BC535 /* WWSequential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSequential.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				1D5AEA961B1DAB36000CA6D3 /* WWMath.m */,
 				1D5AEA9E1B1DBA63000CA6D3 /* WWSpwn.h */,
 				1D5AEA9F1B1DBA63000CA6D3 /* WWSpwn.m */,
+				1DF6600D1B1F0082001BC535 /* WWSequential.h */,
+				1DF6600E1B1F0082001BC535 /* WWSequential.m */,
 				1D5AEA831B1D8829000CA6D3 /* WWManager.h */,
 				1D5AEA841B1D8829000CA6D3 /* WWManager.m */,
 			);
@@ -278,6 +283,7 @@
 				1D5AEA9D1B1DB6C2000CA6D3 /* WWBezier.m in Sources */,
 				1DE9EE841B1BE75B00BCF483 /* WWEffect.m in Sources */,
 				1DE9EE651B1BE40D00BCF483 /* ViewController.m in Sources */,
+				1DF6600F1B1F0082001BC535 /* WWSequential.m in Sources */,
 				1D5AEA9A1B1DACF8000CA6D3 /* WWEaseIn.m in Sources */,
 				1DE9EE621B1BE40D00BCF483 /* AppDelegate.m in Sources */,
 				1D5AEA8E1B1D9F7C000CA6D3 /* WWAlphaEffect.m in Sources */,

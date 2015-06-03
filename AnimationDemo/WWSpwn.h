@@ -10,4 +10,5 @@
 @interface WWSpwn : WWEffect
 @property (nonatomic,strong) NSMutableArray*    _actionStack;
 + (WWSpwn*) createWithTowAction:(WWEffect*) effect1  effect2:(WWEffect*) effect2;
++ (WWSpwn*) createWithTowActions:(NSArray *)actionStack;
 @end
