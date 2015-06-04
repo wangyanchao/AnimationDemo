@@ -13,6 +13,7 @@
 @interface UIView(FORACTION)
 - (void) setPostion:(CGPoint) pos;
 - (void) setPostion:(float) x y:(float) y;
+- (void) setscale:(float) scale;
 
 - (void) runAction:(WWEffect*)  effect;
 - (void) stopAction;

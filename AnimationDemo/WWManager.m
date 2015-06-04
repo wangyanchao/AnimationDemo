@@ -25,6 +25,11 @@
     [self setPostion:CGPointMake(x, y)];
 }
 
+- (void)setscale:(float) scale
+{
+    [self setTransform:CGAffineTransformScale(self.transform, scale, scale)];
+}
+
 - (void) runAction:(WWEffect*)  effect
 {
     if (effect) {

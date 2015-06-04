@@ -11,14 +11,13 @@
 #import "WWAlphaEffect.h"
 #import "WWManager.h"
 #import "WWMove.h"
-#import "WWEaseIn.h"
 #import "WWBezier.h"
 #import "WWSpwn.h"
 #import "WWSequential.h"
-#import "WWEaseOut.h"
-#import "WWeaseInOut.h"
 #import "WWCallBack.h"
 #import "WWQuadraticEaseIn.h"
+#import "WWScale.h"
+
 @interface ViewController ()
 
 @end
@@ -37,20 +36,11 @@
 
 - (IBAction)action:(id)sender {
     
- //   WWBezier* event = [WWBezier create:CGPointMake(200, 300) controlPoint:CGPointMake(0, 0) time:4];
+    WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
+    WWScale *scale = [WWScale create:0.3 time:1];
+    WWSpwn *spwn = [WWSpwn createWithTowAction:move effect2:scale];
+    [self.aView runAction:spwn];
     
-    WWMove* move = [WWMove create:CGPointMake(200, 200) time:1];
-//    WWeaseInOut *easeIn = [WWeaseInOut create:move];
-//    WWEaseOut *easeOut =[WWEaseOut create:move];
-    WWQuadraticEaseIn *quadraticEaseIn = [WWQuadraticEaseIn create:move];
-    WWCallBack* callBack = [WWCallBack create:quadraticEaseIn callback:^{
-       
-        NSLog(@"ccccccc aaaa   llll   back");
-    }];
-
-    [self.aView runAction:callBack];
-    
-//    [UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#>]
     
     
  
@@ -61,6 +51,5 @@
 - (void)stopAnimation:(NSTimer *)timer;
 {
     [[WWManager sharedManager] removeEffect:[timer userInfo]];
-//    [self.aView stopAction];
 }
 @end
