@@ -1,21 +1,21 @@
 //
-//  WWSize.m
+//  WWRotation.m
 //  AnimationDemo
 //
 //  Created by wangyanchao on 15/6/4.
 //  Copyright (c) 2015年 wangyanchao. All rights reserved.
 //
 
-#import "WWSize.h"
+#import "WWRotation.h"
 #import "WWManager.h"
 
-@implementation WWSize
-+ (WWSize*) create:(CGSize) size  time:(float) time;
+@implementation WWRotation
++ (WWRotation*) create:(float) angle  time:(float) time;
 {
-    WWSize * s = [[WWSize alloc] init];
-    s._end = size;
-    s._maxTime = time;
-    return s;
+    WWRotation * rotation = [[WWRotation alloc] init];
+    rotation._endAngle = angle;
+    rotation._maxTime = time;
+    return rotation;
 }
 
 - (void)reset{
@@ -26,8 +26,9 @@
 {
     [super setTarget:target];
     UIView* view = (UIView*) target;
-    self._begin = view.frame.size;
-
+    CGAffineTransform trans = view.transform;
+    self._beginAngle = trans.b;
+    
 }
 - (void) excute:(float)rate
 {
@@ -39,9 +40,8 @@
         return;
     }
 
-    float width     = self._begin.width*(1-rate)+self._end.width*rate;
-    float height    = self._begin.height*(1-rate)+self._end.height*rate;
-    [self._target setWidth:width height:height];    
+    rate = self._beginAngle*(1-rate) + self._endAngle*rate;
+    [self._target setAngle:rate];
 }
 
 - (void) caculate:(float)dt

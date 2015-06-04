@@ -16,6 +16,7 @@
 - (void) setscale:(float) scale;
 - (void) setSize:(CGSize) size;
 - (void) setWidth:(float)width height:(float)height;
+- (void) setAngle:(float) angle;
 
 - (void) runAction:(WWEffect*)  effect;
 - (void) stopAction;

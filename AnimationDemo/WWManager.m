@@ -36,6 +36,11 @@
     [self setSize:CGSizeMake(width, height)];
 }
 
+- (void) setAngle:(float) angle
+{
+    [self setTransform:CGAffineTransformRotate(CGAffineTransformIdentity ,angle)];
+    NSLog(@"%f",angle);
+}
 - (void)setscale:(float) scale
 {
     CGAffineTransform trans = CGAffineTransformIdentity;
