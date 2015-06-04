@@ -17,6 +17,7 @@
 #import "WWCallBack.h"
 #import "WWQuadraticEaseIn.h"
 #import "WWScale.h"
+#import "WWSize.h"
 
 @interface ViewController ()
 
@@ -37,8 +38,9 @@
 - (IBAction)action:(id)sender {
     
     WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
-    WWScale *scale = [WWScale create:0.3 time:1];
-    WWSpwn *spwn = [WWSpwn createWithTowAction:move effect2:scale];
+    WWSize* size = [WWSize create:CGSizeMake(50, 50) time:1];
+//    WWScale *scale = [WWScale create:0.3 time:1];
+    WWSpwn *spwn = [WWSpwn createWithTowAction:move effect2:size];
     [self.aView runAction:spwn];
     
     

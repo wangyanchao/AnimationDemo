@@ -9,7 +9,6 @@
 #import "WWContinuedEffect.h"
 
 @interface WWScale : WWContinuedEffect
-//@property (nonatomic,assign) CGAffineTransform _;
 @property (nonatomic,assign) float _end;
 
 + (WWScale*) create:(float) scale  time:(float) time;

@@ -25,6 +25,17 @@
     [self setPostion:CGPointMake(x, y)];
 }
 
+- (void) setSize:(CGSize) size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+- (void) setWidth:(float)width height:(float)height
+{
+    [self setSize:CGSizeMake(width, height)];
+}
+
 - (void)setscale:(float) scale
 {
     [self setTransform:CGAffineTransformScale(self.transform, scale, scale)];

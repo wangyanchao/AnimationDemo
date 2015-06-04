@@ -14,6 +14,8 @@
 - (void) setPostion:(CGPoint) pos;
 - (void) setPostion:(float) x y:(float) y;
 - (void) setscale:(float) scale;
+- (void) setSize:(CGSize) size;
+- (void) setWidth:(float)width height:(float)height;
 
 - (void) runAction:(WWEffect*)  effect;
 - (void) stopAction;
