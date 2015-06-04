@@ -1,17 +1,17 @@
 //
-//  WWQuadraticEaseOut.m
+//  WWElasticEaseInOut.m
 //  AnimationDemo
 //
 //  Created by wangyanchao on 15/6/4.
 //  Copyright (c) 2015年 wangyanchao. All rights reserved.
 //
 
-#import "WWQuadraticEaseOut.h"
+#import "WWElasticEaseInOut.h"
 
-@implementation WWQuadraticEaseOut
-+ (WWQuadraticEaseOut*) create:(WWContinuedEffect*) effect
+@implementation WWElasticEaseInOut
++ (WWElasticEaseInOut*) create:(WWContinuedEffect*) effect
 {
-    WWQuadraticEaseOut* current = [[WWQuadraticEaseOut alloc] init];
+    WWElasticEaseInOut* current = [[WWElasticEaseInOut alloc] init];
     current._target = effect;
     current._maxTime = effect._maxTime;
     return current;
@@ -19,7 +19,7 @@
 
 - (void) excute:(float)rate
 {
-    rate = QuadraticEaseOut(rate);
+    rate = ElasticEaseInOut(rate);
     [super excute:rate];
 }
 @end
