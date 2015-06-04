@@ -21,6 +21,7 @@
 #import "WWElasticEaseOut.h"
 #import "WWScaleFromTo.h"
 #import "WWRotation.h"
+#import "WWReversal.h"
 
 @interface ViewController ()
 
@@ -41,16 +42,18 @@
 
 - (IBAction)action:(id)sender {
     
-//    WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
+    WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
 //    WWSize* size = [WWSize create:CGSizeMake (10, 10) time:1.];
 //    WWScale *scale = [WWScale create:0.3 time:1];
 //    WWScaleFromTo *scale = [WWScaleFromTo createFrom:0.2 to:1. time:1.];
 //    WWElasticEaseOut* ela = [WWElasticEaseOut create:scale];
 //    WWSpwn *spwn = [WWSpwn createWithTowAction:size effect2:move];
     
-    WWRotation *rotation = [WWRotation create:-2*M_PI time:1];
+//    WWRotation *rotation = [WWRotation create:-2*M_PI time:1];
     
-    [self.aView runAction:rotation];
+    WWReversal *rev = [WWReversal create:move];
+    
+    [self.aView runAction:rev];
     
  
     //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];

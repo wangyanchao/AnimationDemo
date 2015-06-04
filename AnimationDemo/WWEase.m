@@ -20,6 +20,20 @@
     return current;
 }
 
+- (void)reset{
+
+    [super reset];
+    
+    self._currentTime = 0;
+}
+
+- (void)reveal{
+    
+    [super reveal];
+    
+    [self._target reveal];
+}
+
 - (void) excute:(float)rate
 {
     if (!self._target) {

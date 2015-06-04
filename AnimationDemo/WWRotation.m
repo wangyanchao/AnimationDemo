@@ -13,7 +13,7 @@
 + (WWRotation*) create:(float) angle  time:(float) time;
 {
     WWRotation * rotation = [[WWRotation alloc] init];
-    rotation._endAngle = angle;
+    rotation._end = angle;
     rotation._maxTime = time;
     return rotation;
 }
@@ -21,13 +21,21 @@
 - (void)reset{
     [super reset];
 }
+- (void)reveal
+{
+    [super reveal];
+    
+    float tem = self._begin;
+    self._begin = self._end;
+    self._end = tem;
+}
 
 - (void) setTarget:(id)target
 {
     [super setTarget:target];
     UIView* view = (UIView*) target;
     CGAffineTransform trans = view.transform;
-    self._beginAngle = trans.b;
+    self._begin = trans.b;
     
 }
 - (void) excute:(float)rate
@@ -40,7 +48,7 @@
         return;
     }
 
-    rate = self._beginAngle*(1-rate) + self._endAngle*rate;
+    rate = self._begin*(1-rate) + self._end*rate;
     [self._target setAngle:rate];
 }
 

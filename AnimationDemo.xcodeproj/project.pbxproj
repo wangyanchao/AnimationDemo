@@ -24,7 +24,7 @@
 		1D233E571B20261D004E744D /* WWAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E561B20261D004E744D /* WWAlpha.m */; };
 		1D233E5D1B203272004E744D /* WWScaleFromTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E5C1B203272004E744D /* WWScaleFromTo.m */; };
 		1D233E601B203BC5004E744D /* WWRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E5F1B203BC5004E744D /* WWRotation.m */; };
-		1D233E631B2041B1004E744D /* WWReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E621B2041B1004E744D /* WWReveal.m */; };
+		1D233E661B2049E6004E744D /* WWReversal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E651B2049E6004E744D /* WWReversal.m */; };
 		1D5AEA851B1D8829000CA6D3 /* WWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA841B1D8829000CA6D3 /* WWManager.m */; };
 		1D5AEA8B1B1D9EFE000CA6D3 /* WWContinuedEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA8A1B1D9EFE000CA6D3 /* WWContinuedEffect.m */; };
 		1D5AEA951B1DA9E5000CA6D3 /* WWMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA941B1DA9E5000CA6D3 /* WWMove.m */; };
@@ -88,8 +88,8 @@
 		1D233E5C1B203272004E744D /* WWScaleFromTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWScaleFromTo.m; sourceTree = "<group>"; };
 		1D233E5E1B203BC5004E744D /* WWRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWRotation.h; sourceTree = "<group>"; };
 		1D233E5F1B203BC5004E744D /* WWRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRotation.m; sourceTree = "<group>"; };
-		1D233E611B2041B1004E744D /* WWReveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWReveal.h; sourceTree = "<group>"; };
-		1D233E621B2041B1004E744D /* WWReveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWReveal.m; sourceTree = "<group>"; };
+		1D233E641B2049E6004E744D /* WWReversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWReversal.h; sourceTree = "<group>"; };
+		1D233E651B2049E6004E744D /* WWReversal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWReversal.m; sourceTree = "<group>"; };
 		1D5AEA831B1D8829000CA6D3 /* WWManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWManager.h; sourceTree = "<group>"; };
 		1D5AEA841B1D8829000CA6D3 /* WWManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWManager.m; sourceTree = "<group>"; };
 		1D5AEA891B1D9EFE000CA6D3 /* WWContinuedEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWContinuedEffect.h; sourceTree = "<group>"; };
@@ -214,8 +214,8 @@
 				1D233E5C1B203272004E744D /* WWScaleFromTo.m */,
 				1D233E2E1B1FEF45004E744D /* WWCallBack.h */,
 				1D233E2F1B1FEF45004E744D /* WWCallBack.m */,
-				1D233E611B2041B1004E744D /* WWReveal.h */,
-				1D233E621B2041B1004E744D /* WWReveal.m */,
+				1D233E641B2049E6004E744D /* WWReversal.h */,
+				1D233E651B2049E6004E744D /* WWReversal.m */,
 				1D5AEA8F1B1DA245000CA6D3 /* WWMath.h */,
 				1D5AEA961B1DAB36000CA6D3 /* WWMath.m */,
 				1D5AEA9E1B1DBA63000CA6D3 /* WWSpwn.h */,
@@ -354,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D233E661B2049E6004E744D /* WWReversal.m in Sources */,
 				1D5AEAA01B1DBA63000CA6D3 /* WWSpwn.m in Sources */,
 				1D5AEA9D1B1DB6C2000CA6D3 /* WWBezier.m in Sources */,
 				1DE9EE841B1BE75B00BCF483 /* WWEffect.m in Sources */,
@@ -376,7 +377,6 @@
 				1D233E451B20079E004E744D /* WWElasticEaseInOut.m in Sources */,
 				1D233E4B1B200800004E744D /* WWBounceEaseOut.m in Sources */,
 				1D233E511B20096A004E744D /* WWScale.m in Sources */,
-				1D233E631B2041B1004E744D /* WWReveal.m in Sources */,
 				1DE9EE5F1B1BE40D00BCF483 /* main.m in Sources */,
 				1D233E301B1FEF45004E744D /* WWCallBack.m in Sources */,
 				1D5AEA951B1DA9E5000CA6D3 /* WWMove.m in Sources */,

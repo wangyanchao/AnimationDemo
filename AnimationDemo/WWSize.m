@@ -18,8 +18,17 @@
     return s;
 }
 
-- (void)reset{
+- (void)reset
+{
     [super reset];
+}
+- (void)reveal
+{
+    [super reveal];
+    
+    CGSize tem = self._begin;
+    self._begin = self._end;
+    self._end = tem;
 }
 
 - (void) setTarget:(id)target

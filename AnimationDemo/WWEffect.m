@@ -24,7 +24,7 @@
 }
 - (void) reset
 {
-    
+    self._isDone = NO;
 }
 - (void) reveal
 {

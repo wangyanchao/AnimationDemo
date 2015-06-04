@@ -9,8 +9,8 @@
 #import "WWContinuedEffect.h"
 
 @interface WWRotation : WWContinuedEffect
-@property (nonatomic,assign) float _beginAngle;
-@property (nonatomic,assign) float _endAngle;
+@property (nonatomic,assign) float _begin;
+@property (nonatomic,assign) float _end;
 
 + (WWRotation*) create:(float) angle  time:(float) time;
 @end

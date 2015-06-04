@@ -13,6 +13,12 @@
 @synthesize _currentTime;
 @synthesize _target;
 
+- (void) reset
+{
+    [super reset];
+    self._currentTime = 0;
+}
+
 - (void) setTarget:(id) target
 {
     if ([target isKindOfClass:[UIView class]]) {

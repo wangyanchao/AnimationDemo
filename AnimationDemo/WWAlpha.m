@@ -22,7 +22,15 @@
 - (void) reset
 {
     [super reset];
-    //TODO:看看回头该干啥
+}
+
+- (void) reveal
+{
+    [super reveal];
+    
+    float tem = self._begin;
+    self._begin = self._end;
+    self._end = tem;
 }
 
 - (void) setTarget:(id)target

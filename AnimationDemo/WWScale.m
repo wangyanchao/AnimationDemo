@@ -23,6 +23,14 @@
 - (void)reset{
     [super reset];
 }
+- (void)reveal
+{
+    [super reveal];
+    
+    float tem = self._begin;
+    self._begin = self._end;
+    self._end = tem;
+}
 
 - (void) setTarget:(id)target
 {
