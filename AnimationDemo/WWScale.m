@@ -10,6 +10,8 @@
 #import "WWManager.h"
 
 @implementation WWScale
+@synthesize  _begin;
+@synthesize  _end;
 + (WWScale*) create:(float) scale  time:(float) time;
 {
     WWScale * sca = [[WWScale alloc] init];
@@ -25,6 +27,9 @@
 - (void) setTarget:(id)target
 {
     [super setTarget:target];
+    UIView * view = (UIView*) target;
+    CGAffineTransform trans = view.transform;
+    self._begin = trans.a;
 }
 - (void) excute:(float)rate
 {
@@ -36,8 +41,7 @@
         return;
     }
     
-    self._target.transform = CGAffineTransformIdentity;
-    rate = (self._end-1) *rate +1;
+    rate = self._begin * (1 - rate) + self._end * rate;
     [self._target setscale:rate];
 }
 

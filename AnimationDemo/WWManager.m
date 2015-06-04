@@ -38,7 +38,9 @@
 
 - (void)setscale:(float) scale
 {
-    [self setTransform:CGAffineTransformScale(self.transform, scale, scale)];
+    CGAffineTransform trans = CGAffineTransformIdentity;
+    [self setTransform:CGAffineTransformScale(trans, scale, scale)];
+    NSLog(@"%f",scale);
 }
 
 - (void) runAction:(WWEffect*)  effect

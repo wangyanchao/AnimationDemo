@@ -17,6 +17,9 @@
 #import "WWQuadraticEaseIn.h"
 #import "WWScale.h"
 #import "WWSize.h"
+#import "WWElasticEaseInOut.h"
+#import "WWElasticEaseOut.h"
+#import "WWScaleFromTo.h"
 
 @interface ViewController ()
 
@@ -26,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//     [self.aView setscale:0.0];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -37,12 +41,12 @@
 - (IBAction)action:(id)sender {
     
     WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
-    WWSize* size = [WWSize create:CGSizeMake(50, 50) time:1];
+    WWSize* size = [WWSize create:CGSizeMake (10, 10) time:1.];
 //    WWScale *scale = [WWScale create:0.3 time:1];
-    WWSpwn *spwn = [WWSpwn createWithTowAction:move effect2:size];
+//    WWScaleFromTo *scale = [WWScaleFromTo createFrom:0.2 to:1. time:1.];
+//    WWElasticEaseOut* ela = [WWElasticEaseOut create:scale];
+    WWSpwn *spwn = [WWSpwn createWithTowAction:size effect2:move];
     [self.aView runAction:spwn];
-    
-    
     
  
     //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];

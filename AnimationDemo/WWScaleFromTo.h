@@ -1,5 +1,5 @@
 //
-//  WWScale.h
+//  WWScaleFromTo.h
 //  AnimationDemo
 //
 //  Created by wangyanchao on 15/6/4.
@@ -8,9 +8,9 @@
 
 #import "WWContinuedEffect.h"
 
-@interface WWScale : WWContinuedEffect
+@interface WWScaleFromTo : WWContinuedEffect
 @property (nonatomic,assign) float _begin;
 @property (nonatomic,assign) float _end;
 
-+ (WWScale*) create:(float) scale  time:(float) time;
++ (WWScaleFromTo*) createFrom:(float) from to:(float)to time:(float) time;
 @end
