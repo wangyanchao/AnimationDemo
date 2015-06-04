@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "WWEffect.h"
-#import "WWAlphaEffect.h"
 #import "WWManager.h"
 #import "WWMove.h"
 #import "WWBezier.h"

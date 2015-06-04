@@ -1,20 +1,20 @@
 //
-//  WWAlphaEffect.m
+//  WWAlpha.m
 //  AnimationDemo
 //
-//  Created by wangyanchao on 15/6/2.
+//  Created by wangyanchao on 15/6/4.
 //  Copyright (c) 2015年 wangyanchao. All rights reserved.
 //
 
-#import "WWAlphaEffect.h"
-#import "WWMath.h"
-@implementation WWAlphaEffect
+#import "WWAlpha.h"
+
+@implementation WWAlpha
 @synthesize _begin;
 @synthesize _end;
 
-+ (WWAlphaEffect*) create:(float) alpha time:(float) time
++ (WWAlpha*) create:(float) alpha time:(float) time
 {
-    WWAlphaEffect* effect = [[WWAlphaEffect alloc] init];
+    WWAlpha* effect = [[WWAlpha alloc] init];
     effect._end = alpha;
     effect._maxTime = time;
     return effect;
