@@ -25,6 +25,8 @@
 		1D233E5D1B203272004E744D /* WWScaleFromTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E5C1B203272004E744D /* WWScaleFromTo.m */; };
 		1D233E601B203BC5004E744D /* WWRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E5F1B203BC5004E744D /* WWRotation.m */; };
 		1D233E661B2049E6004E744D /* WWReversal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E651B2049E6004E744D /* WWReversal.m */; };
+		1D233E691B205DA6004E744D /* WWRepeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E681B205DA6004E744D /* WWRepeat.m */; };
+		1D233E6C1B205DCD004E744D /* WWRepeatForever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E6B1B205DCD004E744D /* WWRepeatForever.m */; };
 		1D5AEA851B1D8829000CA6D3 /* WWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA841B1D8829000CA6D3 /* WWManager.m */; };
 		1D5AEA8B1B1D9EFE000CA6D3 /* WWContinuedEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA8A1B1D9EFE000CA6D3 /* WWContinuedEffect.m */; };
 		1D5AEA951B1DA9E5000CA6D3 /* WWMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA941B1DA9E5000CA6D3 /* WWMove.m */; };
@@ -90,6 +92,10 @@
 		1D233E5F1B203BC5004E744D /* WWRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRotation.m; sourceTree = "<group>"; };
 		1D233E641B2049E6004E744D /* WWReversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWReversal.h; sourceTree = "<group>"; };
 		1D233E651B2049E6004E744D /* WWReversal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWReversal.m; sourceTree = "<group>"; };
+		1D233E671B205DA6004E744D /* WWRepeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWRepeat.h; sourceTree = "<group>"; };
+		1D233E681B205DA6004E744D /* WWRepeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRepeat.m; sourceTree = "<group>"; };
+		1D233E6A1B205DCD004E744D /* WWRepeatForever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWRepeatForever.h; sourceTree = "<group>"; };
+		1D233E6B1B205DCD004E744D /* WWRepeatForever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWRepeatForever.m; sourceTree = "<group>"; };
 		1D5AEA831B1D8829000CA6D3 /* WWManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWManager.h; sourceTree = "<group>"; };
 		1D5AEA841B1D8829000CA6D3 /* WWManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWManager.m; sourceTree = "<group>"; };
 		1D5AEA891B1D9EFE000CA6D3 /* WWContinuedEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWContinuedEffect.h; sourceTree = "<group>"; };
@@ -216,6 +222,10 @@
 				1D233E2F1B1FEF45004E744D /* WWCallBack.m */,
 				1D233E641B2049E6004E744D /* WWReversal.h */,
 				1D233E651B2049E6004E744D /* WWReversal.m */,
+				1D233E671B205DA6004E744D /* WWRepeat.h */,
+				1D233E681B205DA6004E744D /* WWRepeat.m */,
+				1D233E6A1B205DCD004E744D /* WWRepeatForever.h */,
+				1D233E6B1B205DCD004E744D /* WWRepeatForever.m */,
 				1D5AEA8F1B1DA245000CA6D3 /* WWMath.h */,
 				1D5AEA961B1DAB36000CA6D3 /* WWMath.m */,
 				1D5AEA9E1B1DBA63000CA6D3 /* WWSpwn.h */,
@@ -365,6 +375,7 @@
 				1D233E601B203BC5004E744D /* WWRotation.m in Sources */,
 				1DE9EE621B1BE40D00BCF483 /* AppDelegate.m in Sources */,
 				1DE9EE871B1C0D0A00BCF483 /* WWAction.m in Sources */,
+				1D233E691B205DA6004E744D /* WWRepeat.m in Sources */,
 				1D5AEA8B1B1D9EFE000CA6D3 /* WWContinuedEffect.m in Sources */,
 				1D233E3F1B2006F1004E744D /* WWQuadraticEaseInOut.m in Sources */,
 				1D233E5D1B203272004E744D /* WWScaleFromTo.m in Sources */,
@@ -373,6 +384,7 @@
 				1D233E3C1B200635004E744D /* WWElasticEaseIn.m in Sources */,
 				1D233E541B202145004E744D /* WWSize.m in Sources */,
 				1D233E421B20076B004E744D /* WWElasticEaseOut.m in Sources */,
+				1D233E6C1B205DCD004E744D /* WWRepeatForever.m in Sources */,
 				1D233E4E1B200844004E744D /* WWBounceEaseInOut.m in Sources */,
 				1D233E451B20079E004E744D /* WWElasticEaseInOut.m in Sources */,
 				1D233E4B1B200800004E744D /* WWBounceEaseOut.m in Sources */,
