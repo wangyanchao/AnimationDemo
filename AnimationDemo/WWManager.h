@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WWEffect.h"
-
+//#import "WWEffect.h"
+#import "WWContinuedEffect.h"
 
 @interface UIView(FORACTION)
 - (void) setPostion:(CGPoint) pos;
@@ -28,5 +28,7 @@
 + (WWManager *)sharedManager;
 
 - (void) addeffect:(WWEffect*) effect;
+
+- (void) removeEffect:(WWContinuedEffect*) effect;
 
 @end

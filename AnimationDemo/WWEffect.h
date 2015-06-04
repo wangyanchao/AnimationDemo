@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "WWMath.h"
+#import "easing.h"
 
 @interface WWEffect : NSObject
 @property (assign,nonatomic) BOOL   _isDone;

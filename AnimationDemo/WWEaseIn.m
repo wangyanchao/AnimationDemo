@@ -38,20 +38,11 @@
 - (void) caculate:(float)dt
 {
     self._currentTime +=dt;
-    
-    float halfTime = self._maxTime/2;
-    float halfRate = [WWMath pow:[WWMath safeRate:halfTime v2:self._maxTime]];
-    float rate ;
-    
-    if (self._currentTime < halfTime) {
-       rate = [WWMath pow:[WWMath safeRate:self._currentTime v2:self._maxTime]];
-
-    }else{
-        rate = [WWMath safeRate:(self._currentTime- halfTime) v2:self._maxTime] + halfRate;
-        
+    if (self._currentTime > self._maxTime) {
+        self._currentTime = self._maxTime;
     }
- 
-    [self excute:[WWMath CLAW:rate min:0 max:1]];
+    float  rate = [WWMath safeRate:self._currentTime v2:self._maxTime];
+    [self excute:[WWMath CLAW:[WWMath pow:rate] min:0 max:1]];
     
     if (rate >=1) {
         self._isDone = YES;

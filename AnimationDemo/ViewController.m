@@ -16,7 +16,8 @@
 #import "WWSpwn.h"
 #import "WWSequential.h"
 #import "WWEaseOut.h"
-
+#import "WWeaseInOut.h"
+#import "WWCallBack.h"
 @interface ViewController ()
 
 @end
@@ -37,18 +38,27 @@
     
  //   WWBezier* event = [WWBezier create:CGPointMake(200, 300) controlPoint:CGPointMake(0, 0) time:4];
     
-    WWMove* move = [WWMove create:CGPointMake(0, 0) time:4];
-    WWAlphaEffect* alpha = [WWAlphaEffect create:0.5 time:4];
-    
-    WWEaseOut *easeOut = [WWEaseOut create:move];
-//     WWEaseIn *easeIn = [WWEaseIn create:move];
-//     WWEaseIn *easeIn2 = [WWEaseIn create:spawn];
-//    WWSpwn* spawn = [WWSpwn createWithTowAction:easeIn effect2:alpha];
-    
-    WWSequential*seq = [WWSequential createWithTowActions:@[easeOut,alpha]];
-    
-   
+    WWMove* move = [WWMove create:CGPointMake(200, 200) time:1];
+//    WWeaseInOut *easeIn = [WWeaseInOut create:move];
+    WWEaseOut *easeOut =[WWEaseOut create:move];
+    WWCallBack* callBack = [WWCallBack create:easeOut callback:^{
+       
+        NSLog(@"ccccccc aaaa   llll   back");
+    }];
 
-    [self.aView runAction:seq];
+    [self.aView runAction:callBack];
+    
+//    [UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#>]
+    
+    
+ 
+    //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];
+}
+
+
+- (void)stopAnimation:(NSTimer *)timer;
+{
+    [[WWManager sharedManager] removeEffect:[timer userInfo]];
+//    [self.aView stopAction];
 }
 @end

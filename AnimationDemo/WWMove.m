@@ -52,7 +52,7 @@
     
     [self excute:[WWMath CLAW:rate min:0 max:1]];
     
-    if (rate >=1) {
+    if (self._currentTime >= self._maxTime) {
         self._isDone = YES;
     }
 }

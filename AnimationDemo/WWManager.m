@@ -7,7 +7,8 @@
 //
 
 #import "WWManager.h"
-#import "WWEffect.h"
+//#import "WWEffect.h"
+
 #define FrameInterval   60.0
 
 
@@ -67,10 +68,11 @@ static WWManager *_manager;
     [self.effectArrays addObject:effect];
 }
 
-- (void) removeEffect:(UIView*) view
+- (void) removeEffect:(WWContinuedEffect*) effect;
 {
     for (WWEffect *effect in _effectArrays) {
         
+        [_effectArrays removeObject:effect];    
     }
 }
 

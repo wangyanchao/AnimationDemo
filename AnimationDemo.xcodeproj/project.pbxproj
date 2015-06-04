@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D233E2A1B1FE245004E744D /* WWeaseInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E291B1FE245004E744D /* WWeaseInOut.m */; };
+		1D233E2D1B1FEA06004E744D /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E2B1B1FEA06004E744D /* easing.c */; };
+		1D233E301B1FEF45004E744D /* WWCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D233E2F1B1FEF45004E744D /* WWCallBack.m */; };
 		1D5AEA851B1D8829000CA6D3 /* WWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA841B1D8829000CA6D3 /* WWManager.m */; };
 		1D5AEA8B1B1D9EFE000CA6D3 /* WWContinuedEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA8A1B1D9EFE000CA6D3 /* WWContinuedEffect.m */; };
 		1D5AEA8E1B1D9F7C000CA6D3 /* WWAlphaEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AEA8D1B1D9F7C000CA6D3 /* WWAlphaEffect.m */; };
@@ -40,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D233E281B1FE245004E744D /* WWeaseInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWeaseInOut.h; sourceTree = "<group>"; };
+		1D233E291B1FE245004E744D /* WWeaseInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWeaseInOut.m; sourceTree = "<group>"; };
+		1D233E2B1B1FEA06004E744D /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		1D233E2C1B1FEA06004E744D /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		1D233E2E1B1FEF45004E744D /* WWCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWCallBack.h; sourceTree = "<group>"; };
+		1D233E2F1B1FEF45004E744D /* WWCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWCallBack.m; sourceTree = "<group>"; };
 		1D5AEA831B1D8829000CA6D3 /* WWManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWManager.h; sourceTree = "<group>"; };
 		1D5AEA841B1D8829000CA6D3 /* WWManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWManager.m; sourceTree = "<group>"; };
 		1D5AEA891B1D9EFE000CA6D3 /* WWContinuedEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWContinuedEffect.h; sourceTree = "<group>"; };
@@ -132,6 +141,8 @@
 				1DE9EE5C1B1BE40D00BCF483 /* Supporting Files */,
 				1DE9EE821B1BE75B00BCF483 /* WWEffect.h */,
 				1DE9EE831B1BE75B00BCF483 /* WWEffect.m */,
+				1D233E2C1B1FEA06004E744D /* easing.h */,
+				1D233E2B1B1FEA06004E744D /* easing.c */,
 				1DF6600A1B1EBE7A001BC535 /* WWRate.h */,
 				1DF6600B1B1EBE7A001BC535 /* WWRate.m */,
 				1D5AEA891B1D9EFE000CA6D3 /* WWContinuedEffect.h */,
@@ -146,6 +157,10 @@
 				1D5AEA991B1DACF8000CA6D3 /* WWEaseIn.m */,
 				1DF660101B1F0665001BC535 /* WWEaseOut.h */,
 				1DF660111B1F0665001BC535 /* WWEaseOut.m */,
+				1D233E281B1FE245004E744D /* WWeaseInOut.h */,
+				1D233E291B1FE245004E744D /* WWeaseInOut.m */,
+				1D233E2E1B1FEF45004E744D /* WWCallBack.h */,
+				1D233E2F1B1FEF45004E744D /* WWCallBack.m */,
 				1D5AEA8F1B1DA245000CA6D3 /* WWMath.h */,
 				1D5AEA961B1DAB36000CA6D3 /* WWMath.m */,
 				1D5AEA9E1B1DBA63000CA6D3 /* WWSpwn.h */,
@@ -290,6 +305,7 @@
 				1DE9EE651B1BE40D00BCF483 /* ViewController.m in Sources */,
 				1DF6600F1B1F0082001BC535 /* WWSequential.m in Sources */,
 				1D5AEA9A1B1DACF8000CA6D3 /* WWEaseIn.m in Sources */,
+				1D233E2D1B1FEA06004E744D /* easing.c in Sources */,
 				1DE9EE621B1BE40D00BCF483 /* AppDelegate.m in Sources */,
 				1D5AEA8E1B1D9F7C000CA6D3 /* WWAlphaEffect.m in Sources */,
 				1DE9EE871B1C0D0A00BCF483 /* WWAction.m in Sources */,
@@ -297,6 +313,8 @@
 				1DF660121B1F0665001BC535 /* WWEaseOut.m in Sources */,
 				1DF6600C1B1EBE7A001BC535 /* WWRate.m in Sources */,
 				1DE9EE5F1B1BE40D00BCF483 /* main.m in Sources */,
+				1D233E2A1B1FE245004E744D /* WWeaseInOut.m in Sources */,
+				1D233E301B1FEF45004E744D /* WWCallBack.m in Sources */,
 				1D5AEA951B1DA9E5000CA6D3 /* WWMove.m in Sources */,
 				1D5AEA851B1D8829000CA6D3 /* WWManager.m in Sources */,
 				1D5AEA971B1DAB36000CA6D3 /* WWMath.m in Sources */,

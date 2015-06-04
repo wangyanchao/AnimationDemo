@@ -33,4 +33,5 @@
 {
     return v * v;
 }
+
 @end
