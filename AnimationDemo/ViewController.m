@@ -18,6 +18,7 @@
 #import "WWEaseOut.h"
 #import "WWeaseInOut.h"
 #import "WWCallBack.h"
+#import "WWQuadraticEaseIn.h"
 @interface ViewController ()
 
 @end
@@ -40,8 +41,9 @@
     
     WWMove* move = [WWMove create:CGPointMake(200, 200) time:1];
 //    WWeaseInOut *easeIn = [WWeaseInOut create:move];
-    WWEaseOut *easeOut =[WWEaseOut create:move];
-    WWCallBack* callBack = [WWCallBack create:easeOut callback:^{
+//    WWEaseOut *easeOut =[WWEaseOut create:move];
+    WWQuadraticEaseIn *quadraticEaseIn = [WWQuadraticEaseIn create:move];
+    WWCallBack* callBack = [WWCallBack create:quadraticEaseIn callback:^{
        
         NSLog(@"ccccccc aaaa   llll   back");
     }];

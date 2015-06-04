@@ -44,7 +44,7 @@
     float  rate = [WWMath safeRate:self._currentTime v2:self._maxTime];
     [self excute:[WWMath CLAW:[WWMath pow:rate] min:0 max:1]];
     
-    if (rate >=1) {
+    if (self._currentTime >= self._maxTime) {
         self._isDone = YES;
     }
     
