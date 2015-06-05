@@ -45,30 +45,19 @@
 
 - (IBAction)action:(id)sender {
     
-    WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
-//    WWAlpha* alpha = [WWAlpha create:0.2 time:1];
-//    WWSize* size = [WWSize create:CGSizeMake (10, 10) time:1.];
-//    WWScale *scale = [WWScale create:0.3 time:1];
-//    WWScaleFromTo *scale = [WWScaleFromTo createFrom:0.2 to:1. time:1.];
-//    WWElasticEaseOut* ela = [WWElasticEaseOut create:scale];
-//    WWSpwn *spwn = [WWSpwn createWithTowAction:alpha effect2:move];
-    
-//    WWRotation *rotation = [WWRotation create:-2*M_PI time:1];
-    
-    WWReversal *rev = [WWReversal create:move];
-//    WWRepeat *repeat = [WWRepeat create:move times:3];
+    WWAlpha * alpha = [WWAlpha create:0.5 time:2];
+    WWScale*  scale = [WWScale create:0.1 time:2];
+    WWBezier* be = [WWBezier create:CGPointMake(0, 0) controlPoint:CGPointMake(100, 600) time:2];
+    WWElasticEaseOut* ease = [WWElasticEaseOut create:be];
+    WWRotation * ro = [WWRotation create:-2*M_PI time:2];
+    NSArray* arr = [NSArray arrayWithObjects:alpha,ease,scale,ro, nil];
+    WWSpwn * seq = [WWSpwn createWithTowActions:arr];
 
-    WWCallBack *callback = [WWCallBack createRemove];
+    WWReversal * rev = [WWReversal create:seq];
+    WWRepeat* repeat = [WWRepeat create:rev times:30000];
+
     
-    
-   // WWCallBack *callBack  = [WWCallBack create:self.aView sel:@selector(removeFromSuperview)];
-    
-    WWSequential    * seq = [WWSequential createWithTowAction:rev effect2:callback];
-    
-    
-    
-    
-    [self.aView runAction:seq];
+    [self.aView runAction:repeat];
     
  
     //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];

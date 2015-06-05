@@ -53,7 +53,7 @@
     float x3 = x1 * (1 - rate) + x2 * rate;
     float y3 = y1 * (1 - rate) + y2 * rate;
     
-    [self._target setPostion:x3 y:y3];
+    [self._target setOffset:x3 - self._begin.x y:y3 - self._begin.y];
 }
 
 - (void) caculate:(float)dt

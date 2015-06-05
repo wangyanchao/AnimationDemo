@@ -51,7 +51,8 @@
     }
     float x = self._begin.x * (1 - rate) + self._end.x * rate;
     float y = self._begin.y * (1 - rate) + self._end.y * rate;
-    [self._target setPostion:x y:y];
+//    [self._target setPostion:x y:y];
+    [self._target setOffset:x-self._begin.x   y:y-self._begin.y];
 }
 
 - (void) caculate:(float)dt

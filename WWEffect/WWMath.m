@@ -33,5 +33,12 @@
 {
     return v * v;
 }
++ (double) safeDiv:(double)v1 v2:(double)v2
+{
+    if (v2 == 0 ) {
+        return 1;
+    }
+    return v1 / v2;
+}
 
 @end

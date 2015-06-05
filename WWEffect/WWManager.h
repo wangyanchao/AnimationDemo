@@ -11,8 +11,8 @@
 #import "WWContinuedEffect.h"
 
 @interface UIView(FORACTION)
-- (void) setPostion:(CGPoint) pos;
-- (void) setPostion:(float) x y:(float) y;
+
+- (void) setOffset:(float)x y:(float)y;
 - (void) setscale:(float) scale;
 - (void) setSize:(CGSize) size;
 - (void) setWidth:(float)width height:(float)height;

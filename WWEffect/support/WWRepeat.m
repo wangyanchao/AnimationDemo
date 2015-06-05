@@ -27,7 +27,7 @@
 
 - (void) caculate:(float)dt
 {
-    [_target caculate:dt];
+    [self._target caculate:dt];
     if (_target._isDone)
     {
         self._currentTime ++;

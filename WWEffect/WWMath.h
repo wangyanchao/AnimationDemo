@@ -12,7 +12,9 @@
 
 + (float) CLAW:(float) current min:(float) min max:(float) max;
 + (float)  safeRate:(float) v1 v2:(float) v2;
++ (double) safeDiv:(double)v1 v2:(double)v2;
 + (float) pow:(float) v;
+
 @end
 
 

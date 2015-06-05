@@ -7,6 +7,7 @@
 //
 
 #import "WWManager.h"
+#import "WWMath.h"
 //#import "WWEffect.h"
 
 #define FrameInterval   60.0
@@ -14,17 +15,14 @@
 
 
 @implementation UIView(FORACTION)
-- (void) setPostion:(CGPoint) pos
-{
-    CGRect frame = self.frame;
-    frame.origin = pos;
-    self.frame = frame;
-}
-- (void) setPostion:(float) x y:(float) y
-{
-    [self setPostion:CGPointMake(x, y)];
-}
 
+- (void) setOffset:(float)x y:(float)y
+{
+    CGAffineTransform curTrans = self.transform;
+    curTrans.tx = x;
+    curTrans.ty = y;
+    self.transform = curTrans;
+}
 - (void) setSize:(CGSize) size
 {
     CGRect frame = self.frame;
@@ -36,16 +34,46 @@
     [self setSize:CGSizeMake(width, height)];
 }
 
+CGAffineTransform makeTransform(CGFloat xScale, CGFloat yScale,
+                                CGFloat theta, CGFloat tx, CGFloat ty)
+{
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    transform.a = xScale * cos(theta);
+    transform.b = yScale * sin(theta);
+    transform.c = xScale * -sin(theta);
+    transform.d = yScale * cos(theta);
+    transform.tx = tx;
+    transform.ty = ty;
+    
+    return transform;
+}
+
 - (void) setAngle:(float) angle
 {
-    [self setTransform:CGAffineTransformRotate(CGAffineTransformIdentity ,angle)];
-    NSLog(@"%f",angle);
+    CGAffineTransform curTrans = self.transform;
+    //    transform.a = xScale * cos(theta);
+    //    transform.c = xScale * -sin(theta);
+    double theta = atan([WWMath safeDiv:-curTrans.c v2:curTrans.a]);
+    double xScale = [WWMath safeDiv:curTrans.a v2:cos(theta)];
+    double yScale = [WWMath safeDiv:curTrans.b v2:sin(theta)];
+    double tx = curTrans.tx;
+    double ty = curTrans.ty;
+    
+    self.transform =  makeTransform(xScale, yScale, angle, tx, ty);
+
 }
 - (void)setscale:(float) scale
 {
-    CGAffineTransform trans = CGAffineTransformIdentity;
-    [self setTransform:CGAffineTransformScale(trans, scale, scale)];
-    NSLog(@"%f",scale);
+    
+    CGAffineTransform curTrans = self.transform;
+    //    transform.a = xScale * cos(theta);
+    //    transform.c = xScale * -sin(theta);
+    double theta = atan([WWMath safeDiv:-curTrans.c v2:curTrans.a]);
+    double tx = curTrans.tx;
+    double ty = curTrans.ty;
+
+    self.transform = makeTransform(scale, scale, theta, tx, ty);
 }
 
 - (void) runAction:(WWEffect*)  effect
