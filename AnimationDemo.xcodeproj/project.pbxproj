@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1DEF371B21A2F300D93101 /* WWDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DEF361B21A2F300D93101 /* WWDelay.m */; };
 		1D539E3E1B213544007400C2 /* WWAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D539E051B213544007400C2 /* WWAlpha.m */; };
 		1D539E3F1B213544007400C2 /* WWMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D539E071B213544007400C2 /* WWMove.m */; };
 		1D539E401B213544007400C2 /* WWRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D539E091B213544007400C2 /* WWRotation.m */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D1DEF351B21A2F300D93101 /* WWDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWDelay.h; sourceTree = "<group>"; };
+		1D1DEF361B21A2F300D93101 /* WWDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWDelay.m; sourceTree = "<group>"; };
 		1D539E041B213544007400C2 /* WWAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWAlpha.h; sourceTree = "<group>"; };
 		1D539E051B213544007400C2 /* WWAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWAlpha.m; sourceTree = "<group>"; };
 		1D539E061B213544007400C2 /* WWMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWMove.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				1D539E351B213544007400C2 /* WWSequential.m */,
 				1D539E361B213544007400C2 /* WWSpwn.h */,
 				1D539E371B213544007400C2 /* WWSpwn.m */,
+				1D1DEF351B21A2F300D93101 /* WWDelay.h */,
+				1D1DEF361B21A2F300D93101 /* WWDelay.m */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				1D539E4A1B213544007400C2 /* WWElasticEaseIn.m in Sources */,
 				1D539E501B213544007400C2 /* WWBezier.m in Sources */,
 				1D539E411B213544007400C2 /* WWScale.m in Sources */,
+				1D1DEF371B21A2F300D93101 /* WWDelay.m in Sources */,
 				1D539E561B213544007400C2 /* WWSpwn.m in Sources */,
 				1D539E3E1B213544007400C2 /* WWAlpha.m in Sources */,
 				1DE9EE621B1BE40D00BCF483 /* AppDelegate.m in Sources */,
