@@ -23,6 +23,8 @@
 #import "WWRotation.h"
 #import "WWReversal.h"
 #import "WWAlpha.h"
+#import "WWRepeat.h"
+#import "WWRepeatForever.h"
 
 @interface ViewController ()
 
@@ -44,18 +46,19 @@
 - (IBAction)action:(id)sender {
     
     WWMove* move = [WWMove create:CGPointMake(0, 0) time:1];
-    WWAlpha* alpha = [WWAlpha create:0.2 time:1];
+//    WWAlpha* alpha = [WWAlpha create:0.2 time:1];
 //    WWSize* size = [WWSize create:CGSizeMake (10, 10) time:1.];
 //    WWScale *scale = [WWScale create:0.3 time:1];
 //    WWScaleFromTo *scale = [WWScaleFromTo createFrom:0.2 to:1. time:1.];
 //    WWElasticEaseOut* ela = [WWElasticEaseOut create:scale];
-    WWSpwn *spwn = [WWSpwn createWithTowAction:alpha effect2:move];
+//    WWSpwn *spwn = [WWSpwn createWithTowAction:alpha effect2:move];
     
 //    WWRotation *rotation = [WWRotation create:-2*M_PI time:1];
     
-    WWReversal *rev = [WWReversal create:spwn];
-    
-    [self.aView runAction:rev];
+    WWReversal *rev = [WWReversal create:move];
+//    WWRepeat *repeat = [WWRepeat create:move times:3];
+    WWRepeatForever* repeat = [WWRepeatForever create:rev];
+    [self.aView runAction:repeat];
     
  
     //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];

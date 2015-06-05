@@ -9,5 +9,6 @@
 #import "WWEffect.h"
 
 @interface WWRepeatForever : WWEffect
-
+@property (nonatomic,strong) WWEffect* _target;
++ (WWRepeatForever*) create:(WWEffect*) effect;
 @end

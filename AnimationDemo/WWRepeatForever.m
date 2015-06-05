@@ -10,4 +10,26 @@
 
 @implementation WWRepeatForever
 
+@synthesize _target;
+
++ (WWRepeatForever*) create:(WWEffect*) effect;{
+    
+    WWRepeatForever * repeat = [[WWRepeatForever alloc] init];
+    repeat._target = effect;
+    return repeat;
+}
+
+- (void) setTarget:(id)target
+{
+    [self._target setTarget:target];
+}
+
+- (void) caculate:(float)dt
+{
+    [_target caculate:dt];
+    if (_target._isDone)
+    {
+        [self._target reset];
+    }
+}
 @end

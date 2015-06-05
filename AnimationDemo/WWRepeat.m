@@ -28,6 +28,16 @@
 - (void) caculate:(float)dt
 {
     [_target caculate:dt];
+    if (_target._isDone)
+    {
+        self._currentTime ++;
+        if (self._currentTime <self._times) {
+            [self._target reset];
+        }else{
+        
+            self._isDone = YES;
+        }
+    }
 }
 
 @end
