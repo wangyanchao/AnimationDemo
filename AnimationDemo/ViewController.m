@@ -57,8 +57,18 @@
     
     WWReversal *rev = [WWReversal create:move];
 //    WWRepeat *repeat = [WWRepeat create:move times:3];
-    WWRepeatForever* repeat = [WWRepeatForever create:rev];
-    [self.aView runAction:repeat];
+
+    WWCallBack *callback = [WWCallBack createRemove];
+    
+    
+   // WWCallBack *callBack  = [WWCallBack create:self.aView sel:@selector(removeFromSuperview)];
+    
+    WWSequential    * seq = [WWSequential createWithTowAction:rev effect2:callback];
+    
+    
+    
+    
+    [self.aView runAction:seq];
     
  
     //[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopAnimation:) userInfo:move repeats:NO];

@@ -11,8 +11,8 @@
 typedef void(^callback)(void);
 
 @interface WWCallBack : WWEffect
-
-@property (nonatomic,strong) WWEffect* _target;
-@property (nonatomic,assign) callback _callback;
-+ (WWCallBack*) create:(WWEffect*) effect callback:(void (^)(void))callback;
+@property (nonatomic,weak)id _target;
+@property (nonatomic,assign)SEL _selecter;
++ (WWCallBack*) create:(id)target selecter:(SEL)selecter;
++ (WWCallBack*) createRemove;
 @end
