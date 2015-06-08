@@ -9,8 +9,7 @@
 #import "WWEffect.h"
 
 @interface WWDelay : WWEffect
-
-//@property (nonatomic)
 @property (nonatomic, assign)float  _time;
+@property (nonatomic, assign)float  _begin;
 + (WWDelay *)create: (float)time;
 @end

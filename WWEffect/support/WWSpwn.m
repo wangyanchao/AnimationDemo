@@ -35,6 +35,7 @@
 
 - (void)reset
 {
+    [super reset];
     for (WWEffect* effect in self._actionStack) {
         [effect reset];
     }
@@ -42,6 +43,7 @@
 
 - (void)reveal
 {
+    [super reveal];
     for (WWEffect* effect in self._actionStack) {
         [effect reveal];
     }

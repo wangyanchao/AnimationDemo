@@ -15,15 +15,20 @@
 {
     WWDelay * delay = [[WWDelay alloc] init];
     delay._time = time;
+    delay._begin = time;
     return delay;
+}
+- (void)reset{
+    [super reset];
+    self._time = self._begin;
 }
 
 - (void) caculate:(float)dt
 {
-//    self._time -=dt;
-//    if (self._) {
-//        <#statements#>
-//    }
+    self._time -= dt;
+    if (self._time <= 0) {
+        self._isDone = YES;
+    }
 }
 
 @end

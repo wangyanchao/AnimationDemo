@@ -25,6 +25,7 @@
 #import "WWAlpha.h"
 #import "WWRepeat.h"
 #import "WWRepeatForever.h"
+#import "WWDelay.h"
 
 @interface ViewController ()
 
@@ -47,16 +48,19 @@
     
     WWAlpha * alpha = [WWAlpha create:0.5 time:2];
     WWScale*  scale = [WWScale create:0.1 time:2];
+    WWDelay *delay = [WWDelay create:1.];
     WWBezier* be = [WWBezier create:CGPointMake(0, 0) controlPoint:CGPointMake(100, 600) time:2];
     WWElasticEaseOut* ease = [WWElasticEaseOut create:be];
     WWRotation * ro = [WWRotation create:-2*M_PI time:2];
     NSArray* arr = [NSArray arrayWithObjects:alpha,ease,scale,ro, nil];
     WWSpwn * seq = [WWSpwn createWithTowActions:arr];
 
-    WWReversal * rev = [WWReversal create:seq];
-    WWRepeat* repeat = [WWRepeat create:rev times:30000];
+    WWSequential *se = [WWSequential createWithTowAction:delay effect2:seq];
+//    WWReversal * rev = [WWReversal create:se];
+    WWRepeat* repeat = [WWRepeat create:se times:30000];
 
     
+
     [self.aView runAction:repeat];
     
  
